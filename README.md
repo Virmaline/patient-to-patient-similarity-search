@@ -209,13 +209,12 @@ Then the output includes additional fields:
     "condition_distance": 0.1802,
     "procedure_distance": 0.4015,
     "age_penalty": 0.0951,
-    "temporal_penalty": null,
-    "sequence_penalty": null
+    "temporal_penalty": 0.0062,
+    "sequence_penalty": 0.0031
   }
 ]
 ```
-
-The event-level temporal and sequence terms are included inside event matching costs, so the top-level `temporal_penalty` and `sequence_penalty` fields are currently `null`.
+The event-level temporal and sequence terms are included inside event matching costs. When component-score output is enabled, `temporal_penalty` and `sequence_penalty` show the weighted contribution of those tie-breakers to the event-level matching distance.
 
 ### Limit result count
 

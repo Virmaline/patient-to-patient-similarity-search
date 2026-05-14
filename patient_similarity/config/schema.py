@@ -117,7 +117,9 @@ class ScoringConfig:
         for name, value in scales.items():
             if value <= 0.0:
                 raise ValueError(f"scoring.{name} must be greater than 0.0.")
-
+            
+        if self.age_weight > 1.0:
+            raise ValueError("scoring.age_weight cannot be greater than 1.0.")
 
 @dataclass
 class OutputConfig:
