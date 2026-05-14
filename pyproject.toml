@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "patient-to-patient-similarity-search"
+version = "0.1.0"
+description = "Patient-to-patient similarity ranking using SNOMED CT condition and procedure histories."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+]
+
+[project.scripts]
+patient-similarity = "patient_similarity.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["patient_similarity*"]

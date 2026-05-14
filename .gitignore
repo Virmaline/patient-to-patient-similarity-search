@@ -1,0 +1,4 @@
+*.pyc
+/.venv
+/data
+/patient_to_patient_similarity_search.egg-info

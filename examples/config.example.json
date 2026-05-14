@@ -1,0 +1,37 @@
+{
+  "preprocessing": {
+    "hierarchical_pruning": true,
+    "deduplicate_exact_codes": true,
+    "unknown_code_policy": "drop"
+  },
+  "distance": {
+    "method": "lin",
+    "unknown_distance": 1.0
+  },
+  "matching": {
+    "method": "assignment",
+    "unmatched_penalty": 1.0,
+    "semantic_threshold": 0.3
+  },
+  "event_weighting": {
+    "rarity_strength": 6.0,
+    "semantic_support_threshold": 0.3,
+    "semantic_support_strength": 1.5,
+    "semantic_support_max_multiplier": 1.75
+  },
+  "scoring": {
+    "condition_weight": 0.75,
+    "procedure_weight": 0.25,
+    "age_weight": 0.4,
+    "age_scale_years": 20.0,
+    "temporal_weight": 0.05,
+    "sequence_weight": 0.05,
+    "match_age_scale_years": 10.0,
+    "sequence_scale": 0.25
+  },
+  "output": {
+    "include_component_scores": false,
+    "include_matches": false,
+    "max_results": null
+  }
+}
